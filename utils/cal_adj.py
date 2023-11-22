@@ -40,3 +40,21 @@ def sym_norm(adjacency):
     identity = torch.eye(adjacency.shape[0], device=device)
     adjacency = adjacency + adj_T * (adj_T > adjacency).float() - adjacency * (adj_T > adjacency).float()
     return F.normalize(adjacency + identity, p=1)
+
+def to_sparse(x):
+    # Check if the tensor is already sparse
+    if x.is_sparse:
+        return x
+    # Find non-zero indices
+    indices = torch.nonzero(x, as_tuple=False)
+    # Handle the case where all elements are zeros
+    if indices.numel() == 0:
+        return torch.sparse_coo_tensor([], [], x.size()).to(x.dtype)
+
+    # Transpose the indices to match sparse tensor format
+    indices = indices.t()
+    # Extract values at the non-zero indices
+    values = x[tuple(indices[i] for i in range(indices.size(0)))]
+    # Create a sparse tensor with the same type as the input tensor
+    return torch.sparse_coo_tensor(indices, values, x.size()).to(x.dtype)
+
