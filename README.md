@@ -19,9 +19,16 @@ The project focuses on utilizing advanced machine learning techniques to analyze
 - training_scripts/: Scripts to run the training, validation, and testing phases of the model.
 - results/: Folder to store the output results, including model performance metrics and plots.
 
+## Data
+The datasets supporting the conclusions of this article are available in the Autism Brain Imaging Data Exchange
+and National Database for Autism Research repositories; (ABIDE), http://fcon_1000.projects.nitrc.org/indi/abide/.
+KQJH datasets will be opening in the future.
+
+
 ## Citation
 If you find this work useful in your research, please consider citing the original paper:
 "Distinct Neurodevelopmental Patterns and Intermediate Fusion-Based Predictive Modeling in Autism"
 
 ## Contact
-For any queries or discussions regarding this project, feel free to open an issue in this repository or contact the maintainers directly.
+For any queries or discussions regarding this project, feel free to open an issue in this repository or contact Simon Wang through Email (simon971234@gmail.com).
+
