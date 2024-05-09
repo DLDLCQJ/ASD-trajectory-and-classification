@@ -1,3 +1,10 @@
+
+""" A Multi-view GCN workflow with intermediate integration strategy for Autism MRI data Classification.
+Implementation of the paper: (XXX)
+Author of this code: Simon Wang (https://github.com/DLDLCQJ/ASD-trajectory-and-classification)
+Created : 07/20/2023
+"""
+
 import os
 import argparse 
 import numpy as np
