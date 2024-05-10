@@ -1,3 +1,6 @@
+import torch
+import torch.nn as nn
+
 class GCNConv(nn.Module):
     def __init__(self, in_features, out_features, bias=True):
         super(GCNConv, self).__init__()
