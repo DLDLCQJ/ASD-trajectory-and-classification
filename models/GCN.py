@@ -1,3 +1,7 @@
+import torch
+import torch.nn as nn
+from models.model import *
+
 class GCN(nn.Module):
     def __init__(self, in_dim, lat_dim, k_order, num_layers, dropout, model_type):
         super(GCN, self).__init__()
