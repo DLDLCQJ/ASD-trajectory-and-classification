@@ -1,3 +1,7 @@
+from models.GCN import *
+from models.LMF import *
+from models.model import *
+
 def init_model(num_views, num_classes, input_dims, latent_dims, num_layers, dropout, k_order, rank, output_dim, model_type):
     models = {}
     for i in range(num_views):
