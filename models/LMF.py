@@ -1,3 +1,6 @@
+import torch
+import torch.nn as nn
+
 class LMF(nn.Module):
     """
     Low-rank Multimodal Fusion (LMF) for combining features from multiple modalities.
