@@ -1,3 +1,6 @@
+import torch
+import torch.nn as nn
+
 def cosine_dis(x1, x2=None, eps=1e-8):
     """
     Compute the cosine distance between two sets of vectors.
