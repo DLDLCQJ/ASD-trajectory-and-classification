@@ -1,3 +1,7 @@
+from models import *
+from training_scripts import *
+
+
 def train_test(trval_idx, tr_idx, te_idx, labels, data_list, view_list, num_class, num_layers, model_type, lr_e, lr_e_pretrain, lr_c, num_epoch, patience,checkpoints, num_epoch_pretrain, parameter, latent_dim_list, gcn_dropout, k_order, rank):
     num_view = len(view_list)
     dim_out = num_class
