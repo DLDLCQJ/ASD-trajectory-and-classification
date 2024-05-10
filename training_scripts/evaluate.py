@@ -1,5 +1,10 @@
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
+
 def evaluate(data_list, adj_list, indices, labels, model_dict, label=None):
-    criterion = torch.nn.CrossEntropyLoss(reduction='none')
+    criterion = nn.CrossEntropyLoss(reduction='none')
     with torch.no_grad():
         for m in model_dict:
             model_dict[m].eval()
