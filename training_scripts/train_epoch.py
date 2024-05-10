@@ -1,7 +1,14 @@
+import time
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+from training_scripts.evaluate import *
+
 def train_epoch(data_tr_list, adj_tr_list, data_trval_list, adj_trval_list, labels,
                 tr_idx, trval_idx, model_dict, optim_dict, LMF=True):
     start_time = time.time()
-    criterion = torch.nn.CrossEntropyLoss(reduction='none')
+    criterion = nn.CrossEntropyLoss(reduction='none')
     tr_loss_dict = {}
     num_views = len(data_tr_list)
 
