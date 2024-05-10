@@ -1,4 +1,4 @@
-from utils import *
+from utils.cal_adj import *
 
 def process_data(trval_idx, tr_idx, te_idx, data_list, parameter):
     # Convert and split data into different sets
