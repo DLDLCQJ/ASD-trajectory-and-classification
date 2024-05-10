@@ -1,3 +1,6 @@
+import torch
+import numpy as np
+
 def set_seed(seed=123):
     """
     Set the seed for reproducibility across various random number generators.
