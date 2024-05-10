@@ -10,8 +10,7 @@ import argparse
 import numpy as np
 from joblib import Parallel, delayed
 from sklearn.preprocessing import scale
-from utils import *
-from data import *
+from data.Kfold import *
 from training_scripts import train_test
 
 set_seed(123)
